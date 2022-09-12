@@ -1,0 +1,52 @@
+C:\Users\incjh\source\repos\FlareExam\FlareExam\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\incjh\source\repos\FlareExam\FlareExam\bin\Debug\net6.0\appsettings.json
+C:\Users\incjh\source\repos\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.staticwebassets.runtime.json
+C:\Users\incjh\source\repos\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.exe
+C:\Users\incjh\source\repos\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.deps.json
+C:\Users\incjh\source\repos\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.runtimeconfig.json
+C:\Users\incjh\source\repos\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.dll
+C:\Users\incjh\source\repos\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.pdb
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.csproj.AssemblyReference.cache
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.AssemblyInfoInputs.cache
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.AssemblyInfo.cs
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.csproj.CoreCompileInputs.cache
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.RazorAssemblyInfo.cache
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.RazorAssemblyInfo.cs
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\scopedcss\bundle\FlareExam.styles.css
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\scopedcss\projectbundle\FlareExam.bundle.scp.css
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.dll
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\refint\FlareExam.dll
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.pdb
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.genruntimeconfig.cache
+C:\Users\incjh\source\repos\FlareExam\FlareExam\obj\Debug\net6.0\ref\FlareExam.dll
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\bin\Debug\net6.0\appsettings.json
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.staticwebassets.runtime.json
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.exe
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.deps.json
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.runtimeconfig.json
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.dll
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\bin\Debug\net6.0\FlareExam.pdb
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.csproj.AssemblyReference.cache
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.AssemblyInfoInputs.cache
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.AssemblyInfo.cs
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.csproj.CoreCompileInputs.cache
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.RazorAssemblyInfo.cache
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.RazorAssemblyInfo.cs
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\scopedcss\bundle\FlareExam.styles.css
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\scopedcss\projectbundle\FlareExam.bundle.scp.css
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.dll
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\refint\FlareExam.dll
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.pdb
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\FlareExam.genruntimeconfig.cache
+C:\Users\incjh\OneDrive\Desktop\Flare Exam\FlareExam\FlareExam\obj\Debug\net6.0\ref\FlareExam.dll

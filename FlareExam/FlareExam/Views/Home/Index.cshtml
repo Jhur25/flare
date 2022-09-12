@@ -1,0 +1,275 @@
+﻿
+
+<div id="section">
+    <div id="myCanvas" style="border:2px solid #d3d3d3;">
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div id="myModal"  class="modal hide fade in"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4 class="modal-title">Create or Set Grid</h4>  
+       <button type="button" class="close" onclick="exit(1);">&times;</button>
+       
+      </div>
+      <div class="modal-body">
+        <table id='dataTable' cellpadding='0' cellspacing='0' width='100%'>
+        <tr><td>Width </td><td><input type="number" class="form-control" id="tbWidth" min="0" style="margin: 5px;"/></td></tr>
+        <tr><td>Height </td><td><input type="number"  class="form-control" id="tbHeight"  min="0" style="margin: 5px;"/></td></tr>
+        <tr><td>X-Axis </td><td><input type="number"  class="form-control" id="tbX"  min="0" style="margin: 5px;"/></td></tr>
+        <tr><td>Y-Axis</td><td><input type="number"  class="form-control" id="tbY"  min="0" style="margin: 5px;" /></td></tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-success"  onclick="addgrid();">Create</button> <button type="button" class="btn btn-default"  onclick="exit(1);">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<table style="float:right;margin: 104px 50px;"><tr><td><button type="button" class="btn btn-success"  onclick="show(2);">Add</button></td>
+    <td><button type="button" class="btn btn-danger" onclick="showremove();">Remove or Find </button> </td></tr></table>
+ 
+
+
+<!-- Modal Add rectangle-->
+<div id="myModalAdd"  class="modal hide fade in"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4 class="modal-title">Create Rectangle</h4>  
+       <button type="button" class="close" onclick="exit(2);">&times;</button>
+       
+      </div>
+      <div class="modal-body">
+        <table id='dataTable' cellpadding='0' cellspacing='0' width='100%'>
+        <tr><td>Width </td><td><input type="number" class="form-control" id="rwidth" min="0" style="margin: 5px;"/></td></tr>
+        <tr><td>Height </td><td><input type="number"  class="form-control" id="rheight"  min="0" style="margin: 5px;"/></td></tr>
+        <tr><td>X-Axis </td><td><input type="number"  class="form-control" id="rx"  min="0" style="margin: 5px;"/></td></tr>
+        <tr><td>Y-Axis</td><td><input type="number"  class="form-control" id="ry"  min="0" style="margin: 5px;" /></td></tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success"  onclick="addrect();">Add</button> <button type="button" class="btn btn-default"  onclick="exit(2);">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal Remove rectangle-->
+<div id="myModalRemove"  class="modal hide fade in"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+       <h4 class="modal-title">Remove or Find Rectangle</h4>  
+       <button type="button" class="close" onclick="exit(3);">&times;</button>
+       
+      </div>
+      <div class="modal-body">
+        <table id='dataTable' cellpadding='0' cellspacing='0' width='100%'>
+        <tr><td>X-Axis </td><td><input type="number"  class="form-control" id="dx"  min="0" style="margin: 5px;"/></td></tr>
+        <tr><td>Y-Axis</td><td><input type="number"  class="form-control" id="dy"  min="0" style="margin: 5px;" /></td></tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-success"  onclick="removerect(2);">Find</button>   <button type="button" class="btn btn-danger"  onclick="removerect(1);">Remove</button> <button type="button" class="btn btn-default"  onclick="exit(3);">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+    function exit(st){
+        if (st === 1) {
+               $('#myModal').modal('hide');
+        }
+        else if(st === 2){
+              $('#myModalAdd').modal('hide');
+        }
+        else{
+              $('#myModalRemove').modal('hide');
+        }
+    }
+    $(document).ready(function() {
+        show(1);
+    });
+    function show(st) {
+        if (st === 1) {
+            $('#myModal').modal({ backdrop: 'static', keyboard: false, });
+            $('#myModal').modal('show');
+        }
+        else if (st === 3) {
+            $('#myModalRemove').modal({ backdrop: 'static', keyboard: false, });
+            $('#myModalRemove').modal('show');
+        }
+        else {
+            $('#myModalAdd').modal({ backdrop: 'static', keyboard: false, });
+            $('#myModalAdd').modal('show');
+        }
+
+    }
+
+    function addgrid(e)  {
+        var grid = {
+              "Width": $("#tbWidth").val(),
+              "Height": $("#tbHeight").val(),
+              "Xaxis": $("#tbX").val(),
+              "Yaxis": $("#tbY").val()
+          };
+          $.post("/Home/AddGrid", grid, 
+               function(data, status)
+                  {
+                    if (!data.isSuccess) {
+                       alert(data.message);
+                    }
+                    else {
+                        alert(data.message);
+                        var c = document.getElementById("myCanvas");
+                        $('#myCanvas').css({
+                            "width": data.grid.width + 'em',
+                            "height": data.grid.height +'em',
+                            "position": "absolute",
+                            'left': data.grid.xaxis + 'em',
+                            'top': data.grid.yaxis + "em"
+                        });
+
+                        $('#myModal').modal('hide');
+                  }
+          });
+       
+    }
+    function addrect(e)  {
+        var rects = [];
+           let leftGrid = (parseFloat($("#myCanvas").css('left').replace('px', '')) / 32) * 2;
+            let topGrid = (parseFloat($("#myCanvas").css('top').replace('px', '')) / 32) * 2;
+
+        const sec = $('#section');
+        const num =  $('#section').children('div').length;
+        var grid = {
+                  "width": parseFloat($("#rwidth").val()),
+                  "height": parseFloat($("#rheight").val()),
+                  "xaxis": parseFloat($("#rx").val()) + leftGrid,
+                  "yaxis": parseFloat($("#ry").val()) + topGrid,
+                  "id": num
+        };
+
+        $("#section div").map(function() {
+            let wid = (parseFloat($(this).css('width').replace('px', '')) / 32) * 2;
+            let het = (parseFloat($(this).css('height').replace('px', '')) / 32) * 2;
+            let left = (parseFloat($(this).css('left').replace('px', '')) / 32) * 2;
+            let top = (parseFloat($(this).css('top').replace('px', '')) / 32) * 2;
+            let id = $(this).attr('id');
+            rects.push(...rects, { "id": id, 'width': wid, 'height': het, 'xaxis': left , 'yaxis': top  })
+        });
+        rects.push(...rects, grid);
+
+        var result = rects.filter(function(el, i, x) {
+
+                        return x.some(function(obj, j) {
+                            return obj.id === el.id && (x = j);
+                        }) && i == x;
+                    }); 
+
+        $.post("/Home/CheckRectangle", { rects: result }, 
+               function(data, status)
+                  {
+                  if (!data.isSuccess) {
+                       alert(data.message);
+                  }
+                  else {
+
+                      let colorlist = ['red', 'blue', 'green','purple','yellow','orange','pink','black'];
+                      let color;
+                      if (num > colorlist.length) {
+                          color = colorlist[colorlist.length - 1];
+                      } else {  color = colorlist[num - 1];  }
+
+                      const p = document.createElement("div");
+                      sec.append(p);
+                      p.setAttribute("id", num);
+                      $('#' + num).css({
+                                "width": $("#rwidth").val() + 'em',
+                                "height":  $("#rheight").val() + 'em',
+                                "border": "solid 2px " +  color ,
+                                 "position": "absolute",
+                                'left': grid.xaxis + 'em',
+                                'top': grid.yaxis + "em"
+                               
+                      });
+                        
+                      $('#myModalAdd').modal('hide');
+                  }
+        });
+       
+    }
+    function removerect(et)  {
+        var rects = [];
+
+        const sec = $('#section');
+        const num =  $('#section').children('div').length;
+        let leftGrid = (parseFloat($("#myCanvas").css('left').replace('px', '')) / 32) * 2;
+        let topGrid = (parseFloat($("#myCanvas").css('top').replace('px', '')) / 32) * 2;
+
+        $("#section div").map(function() {
+            let wid = (parseFloat($(this).css('width').replace('px', '')) / 32) * 2;
+            let het = (parseFloat($(this).css('height').replace('px', '')) / 32) * 2;
+            let left = (parseFloat($(this).css('left').replace('px', '')) / 32) * 2;
+            let top = (parseFloat($(this).css('top').replace('px', '')) / 32) * 2;
+            let id = $(this).attr('id');
+            rects.push(...rects, { "id": id, 'width': wid, 'height': het, 'xaxis': left, 'yaxis': top })
+        });
+
+        var result = rects.filter(function(el, i, x) {
+                        return x.some(function(obj, j) {
+                            return obj.id === el.id && (x = j);
+                        }) && i == x;
+                    }); 
+
+        $.post("/Home/RemoveRectangle", { rects: result, x: parseFloat($("#dx").val()) + leftGrid, y : parseFloat($("#dy").val()) + topGrid  }, 
+               function(data, status)
+                  {
+                  if (!data.isSuccess) {
+                       alert(data.message);
+                  }
+                  else {
+                      if (data.rect === null) {
+                          alert("No Rectangle in this Position");
+                      }
+                      else {
+                            if (et === 1) {
+                                if (data.rect !== null) {
+                                  $("#" + data.rect.id).remove();
+                                  alert('You removed rectangle with x: ' + data.rect.xaxis + " & " + "y: " + data.rect.yaxis + '');
+                                  $('#myModalRemove').modal('hide');
+                                }
+                            }else{
+                                $("#" + data.rect.id).css({ 'background-color': 'gray'});
+                                alert('Rectangle found with x: ' + data.rect.xaxis + " & " + "y: " + data.rect.yaxis + '');
+                                $('#myModalRemove').modal('hide');
+                            }
+
+                      }
+                  }
+        });
+       
+    }
+
+    function showremove(e) {
+            $('#myModalRemove').modal({ backdrop: 'static', keyboard: false, });
+            $('#myModalRemove').modal('show');
+       
+    }
+
+</script>
